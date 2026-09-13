@@ -1,0 +1,23 @@
+# ── Python ────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ── Virtual environment ─────────────────────────
+venv/
+.venv/
+
+# ── Environment variables / secrets ─────────────
+.env
+
+# ── Database ─────────────────────────────────────
+*.db
+*.sqlite3
+
+# ── Editor / OS ──────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+
+# ── Alembic (I'll keep migration scripts, ignore nothing extra yet) ─
