@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 
-app = FastAPI(title='Library Management API')
+from core.config import settings
+
+app = FastAPI(title=settings.APP_NAME, debug=settings.DEBUG)
 
 @app.get('/')
 async def root():
-    return {'message': 'Library Management API is running'}
+    return {'message': f'{settings.APP_NAME} is running', 'environment': settings.ENVIRONMENT}
