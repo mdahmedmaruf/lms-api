@@ -14,6 +14,9 @@ class Settings(BaseSettings):
     # Security
     SECRET_KEY: str = ''
 
+    # Database
+    DATABASE_URL: str ='sqlite+aiosqlite:///./library.db'
+
 @lru_cache
 def get_settings() -> Settings:
     # Cached - avoids re-reading .env on every import.
